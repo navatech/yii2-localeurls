@@ -1,12 +1,10 @@
 Yii2 Locale URLs
 ================
 
-[![Build Status](https://secure.travis-ci.org/codemix/yii2-localeurls.png)](http://travis-ci.org/codemix/yii2-localeurls)
-[![Latest Stable Version](https://poser.pugx.org/codemix/yii2-localeurls/v/stable.svg)](https://packagist.org/packages/codemix/yii2-localeurls)
-[![Total Downloads](https://poser.pugx.org/codemix/yii2-localeurls/downloads)](https://packagist.org/packages/codemix/yii2-localeurls)
-[![Latest Unstable Version](https://poser.pugx.org/codemix/yii2-localeurls/v/unstable.svg)](https://packagist.org/packages/codemix/yii2-localeurls)
-[![HHVM Status](http://hhvm.h4cc.de/badge/yiisoft/yii2-dev.png)](http://hhvm.h4cc.de/package/codemix/yii2-localeurls)
-[![License](https://poser.pugx.org/codemix/yii2-localeurls/license.svg)](https://packagist.org/packages/codemix/yii2-localeurls)
+[![Packagist Version](https://img.shields.io/packagist/v/navatech/yii2-localeurls.svg?style=flat)](https://packagist.org/packages/navatech/yii2-localeurls)
+[![Total Downloads](https://img.shields.io/packagist/dt/navatech/yii2-localeurls.svg?style=flat)](https://packagist.org/packages/navatech/yii2-localeurls)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/navatech/yii2-localeurls/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/navatech/yii2-localeurls/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/navatech/yii2-localeurls/badges/build.png?b=master)](https://scrutinizer-ci.com/g/navatech/yii2-localeurls/build-status/master)
 
 
 Automatic locale/language management through URLs for Yii 2.
@@ -46,7 +44,7 @@ All the above (and more) is configurable of course.
 
 Install the package through [composer](http://getcomposer.org):
 
-    composer require codemix/yii2-localeurls
+    composer require navatech/yii2-localeurls
 
 And then add this to your application configuration:
 
@@ -61,12 +59,10 @@ return [
 
         // Override the urlManager component
         'urlManager' => [
-            'class' => 'codemix\localeurls\UrlManager',
-
-            // List all supported languages here
-            // Make sure, you include your app's default language.
+            'class' => 'navatech\localeurls\UrlManager',
+            //NOT REQUIRED
             'languages' => ['en-US', 'en', 'fr', 'de', 'es-*'],
-        ]
+    ]
 
         // ...
     ]
@@ -393,12 +389,13 @@ return [
     'bootstrap' => ['localeUrls'],
     'components' => [
         'localeUrls' => [
+            //NOT REQUIRED
             'languages' => ['en-US', 'en', 'fr', 'de', 'es-*'],
             'enableDefaultSuffix' => true,
             'enablePersistence' => false,
         ],
         'urlManager' => [
-            'class' => 'codemix\localeurls\UrlManager',
+            'class' => 'navatech\localeurls\UrlManager',
         ]
     ]
 ];
@@ -411,7 +408,8 @@ you should now change it to:
 return [
     'components' => [
         'urlManager' => [
-            'class' => 'codemix\localeurls\UrlManager',
+            'class' => 'navatech\localeurls\UrlManager',
+            //NOT REQUIRED
             'languages' => ['en-US', 'en', 'fr', 'de', 'es-*'],
             'enableDefaultLanguageUrlCode' => true,
             'enableLanguagePersistence' => false,
