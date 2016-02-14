@@ -4,6 +4,7 @@
 	"keywords" : [
 		"yii2",
 		"i18n",
+		"url",
 		"locale"
 	],
 	"type" : "yii2-extension",

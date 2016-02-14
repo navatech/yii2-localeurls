@@ -131,8 +131,8 @@ class UrlManager extends BaseUrlManager {
 	 * @inheritdoc
 	 */
 	public function init() {
-		if($this->languages == null && class_exists('navatech\\language\\Translate')) {
-			$languages = \navatech\language\Translate::getLanguages();
+		if($this->languages == null && class_exists('navatech\\language\\MultiLanguage')) {
+			$languages = \navatech\language\MultiLanguage::getLanguages();
 			foreach($languages as $language) {
 				$this->languages[] = $language['code'];
 			}
