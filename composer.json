@@ -9,22 +9,29 @@
 	],
 	"type" : "yii2-extension",
 	"license" : "MIT",
-	"minimum-stability" : "dev",
+	"homepage" : "https://navatech.vn",
+	"support" : {
+		"source" : "https://github.com/navatech/yii2-localeurls"
+	},
 	"authors" : [
+		{
+			"name" : "Michael Härtl",
+			"email" : "haertl.mike@gmail.com"
+		},
 		{
 			"name" : "Le Phuong",
 			"email" : "phuong17889@gmail.com"
 		}
 	],
 	"require" : {
-		"yiisoft/yii2" : "*"
+		"navatech/yii2-navatech-base" : "@dev"
 	},
 	"suggest" : {
 		"navatech/yii2-multi-language" : "~1.0"
 	},
 	"autoload" : {
 		"psr-4" : {
-			"navatech\\localeurls\\" : ""
+			"navatech\\localeurls\\" : "src/"
 		}
 	}
 }

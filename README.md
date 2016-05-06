@@ -1,17 +1,8 @@
 Yii2 Locale URLs
 ================
 
-[![Packagist Version](https://img.shields.io/packagist/v/navatech/yii2-localeurls.svg?style=flat)](https://packagist.org/packages/navatech/yii2-localeurls)
-[![Total Downloads](https://img.shields.io/packagist/dt/navatech/yii2-localeurls.svg?style=flat)](https://packagist.org/packages/navatech/yii2-localeurls)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/navatech/yii2-localeurls/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/navatech/yii2-localeurls/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/navatech/yii2-localeurls/badges/build.png?b=master)](https://scrutinizer-ci.com/g/navatech/yii2-localeurls/build-status/master)
-
 
 Automatic locale/language management through URLs for Yii 2.
-
-> **IMPORTANT:** If you upgraded from version 1.0.* you have to modify your configuration.
-> Please check the section on [Upgrading](#upgrading) below.
-
 ## Features
 
 With this extension you can use URLs that contain a language code like:
