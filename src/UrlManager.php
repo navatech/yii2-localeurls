@@ -1,6 +1,7 @@
 <?php
 namespace navatech\localeurls;
 
+use navatech\base\Module;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\web\Cookie;
@@ -132,13 +133,13 @@ class UrlManager extends BaseUrlManager {
 	 */
 	public function init() {
 		if ($this->languages == null) {
-			if (class_exists('navatech\\language\\helpers\\MultiLanguageHelpers')) {
-				$languages = \navatech\language\helpers\MultiLanguageHelpers::getLanguages();
+			if (Module::hasMultiLanguage()) {
+				$languages = \navatech\language\helpers\MultiLanguageHelper::getLanguages();
 				foreach ($languages as $language) {
 					$this->languages[] = $language['code'];
 				}
 			} else {
-				throw new InvalidConfigException('If "navatech/yii2-multi-language" does not exists, please special "languages" in config file.');
+				throw new InvalidConfigException('If "navatech/yii2-multi-language" does not exists, please special "language" in config file.');
 			}
 		}
 		if ($this->enableLocaleUrls && $this->languages) {
