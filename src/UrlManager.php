@@ -299,8 +299,8 @@ class UrlManager extends BaseUrlManager {
 				$this->redirectToLanguage('');
 			}
 		} else {
-			$language = null;
-			if ($this->enableLanguagePersistence) {
+			$language = Yii::$app->language;
+			if ($language === null && $this->enableLanguagePersistence) {
 				$language = Yii::$app->session->get($this->languageSessionKey);
 				$language !== null && Yii::trace("Found persisted language '$language' in session.", __METHOD__);
 				if ($language === null) {
